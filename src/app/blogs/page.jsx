@@ -12,7 +12,7 @@ import Image from "next/image";
 const page = async ({ searchParams }) => {
   const params = await searchParams;
   const page = params.page ? parseInt(params.page) : 1;
-  const limit = 10;
+  //const limit = 10;
 
   const response = await fetch(
     `${process.env.NEXTAUTH_URL}/api/getdata?page=${page}` //&per_page=${limit}
@@ -22,7 +22,7 @@ const page = async ({ searchParams }) => {
     throw new Error("Failed to fetch posts");
   }
   const { data, currentPage, totalPages } = await response.json();
-console.log('my data is >>',data[0])
+
   return (
     <>
       <section className="blog-content-main">

@@ -1,0 +1,23 @@
+{
+    "theme_color": "#000000",
+    "background_color": "#000000",
+    "display": "standalone",
+    "scope": "/",
+    "start_url": "/",
+    "name": "Webguruz Technology",
+    "short_name": "Webguruz",
+    "description": "Install the PWA of Webguruz Technology",
+    "icons": [
+        {
+            "src": "./logo2.png",
+            "sizes": "162x162",
+            "type": "image/png"
+        },
+        {
+            "src": "./icon2.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+       
+    ]
+}
