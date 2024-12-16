@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ModalForm from "./PopUpForms/GetQuoteForm";
 import loc1 from "../../public/images/loc-1.svg";
+import usa from "../../public/usa.png"
 
 const Header = () => {
   const pathname = usePathname();
@@ -169,10 +170,11 @@ const Header = () => {
               <ul>
                 <li>
                   <span className="loc-icon">
-                    <Image src={loc1} alt="India-Icon" width={5} height={5} />
+                    <Image src={usa} alt="India-Icon" width={5} height={5} />
                   </span>
-                  <Link href="tel:708 723 3361">
-                    (+91) 708 723 3361 (Sales)
+                  <Link href="tel:+1 (213) 715-5368">
+                  +1 (213) 715-5368 (Sales)
+                    
                   </Link>
                 </li>
                 <li>
@@ -180,7 +182,8 @@ const Header = () => {
                     <span className="loc-icon">
                       <Image src={loc1} alt="India-Icon" width={5} height={5} />
                     </span>
-                    (+91) 959 201 6444 (Jobs)
+                    (+91) 708 723 3361 (Sales)
+                   
                   </Link>
                 </li>
                 <li>

@@ -12,6 +12,7 @@ import Script from "next/script";
 import CanonicalLink from "@/components/CanonicalLink";
 import DynamicScript from "@/components/DynamicScript";
 import DisableFeatures from "./DisableFeatures";
+import CookieConsentBanner from "@/components/CookieConsentBanner";
 
 // Import the Inter and Outfit fonts
 export const inter = Inter({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${outfit.variable}`}>
       <head>
+        
         <CanonicalLink/>
          {/* Google Tag Manager */}
          <Script id="gtm-head" strategy="afterInteractive">
@@ -173,6 +175,7 @@ export default function RootLayout({ children }) {
         {/* this is to disable right clicking and copying any text in the website  */}
 
            {/* Google Tag Manager (noscript) */}
+           <CookieConsentBanner/>
            <noscript>
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NTXKT79M"
                   height="0" width="0" style={{ display: "none", visibility: "hidden" }}></iframe>
