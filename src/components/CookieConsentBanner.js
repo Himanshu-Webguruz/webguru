@@ -24,13 +24,13 @@ const CookieConsentBanner = () => {
     Cookies.set("myCookie", consentString, { expires: 1 });
 
     // Optionally, store in localStorage (can be accessed later in JavaScript)
-    localStorage.setItem("userConsent", consentString);
+    localStorage.setItem("userCookie", consentString);
 
 
   };
 
   const generateUniqueId = () => {
-    return Math.random().toString(36).substring(2, 106);
+    return Math.random().toString(36).substring(2, 16);
   };
 
   return (
