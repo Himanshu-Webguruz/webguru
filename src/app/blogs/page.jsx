@@ -1,5 +1,5 @@
 
-// export const dynamic = 'force-dynamic'
+export const dynamic = 'force-dynamic'
 import "./blogs.css";
 import AllPost from "../../components/blogComponents/02AllPosts";
 import Link from "next/link";
@@ -14,14 +14,14 @@ const page = async ({ searchParams }) => {
   const page = params.page ? parseInt(params.page) : 1;
   const limit = 10
   const response = await fetch(
-    `${process.env.NEXTAUTH_URL}/api/getdata?page=${page}&per_page=${limit}` //
+    `${process.env.NEXTAUTH_URL}/api/getdata?page=${page}&per_page=${limit}` 
   );
 
   if (!response.ok) {
     throw new Error("Failed to fetch posts");
   }
   const { data, currentPage, totalPages } = await response.json();
-
+console.log('my data is >>>',data[0])
   return (
     <>
       <section className="blog-content-main">
