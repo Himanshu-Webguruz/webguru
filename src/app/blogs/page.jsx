@@ -8,19 +8,14 @@ import BlogNewsletter from "@/components/blogComponents/BlogNewsletter";
 import HiringForm from "@/components/PopUpForms/hiringform";
 import blogcat from "../../../public/images/blog-cat-icon.webp"
 import Image from "next/image";
-
+import { getBlogData } from "../../../lib/blogsData";
 const page = async ({ searchParams }) => {
   const params = await searchParams;
   const page = params.page ? parseInt(params.page) : 1;
-  const limit = 10
-  const response = await fetch(
-    `${process.env.NEXTAUTH_URL}/api/getdata?page=${page}&limit=${limit}` 
-  );
 
-  if (!response.ok) {
-    throw new Error("Failed to fetch posts");
-  }
-  const { data, currentPage, totalPages } = await response.json();
+
+  // Use the fetchBlogPosts function
+  const { data, totalPages, currentPage } = await getBlogData(page);
 
   return (
     <>
